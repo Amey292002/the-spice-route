@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Spice Route Bookstore & Café | Jalandhar</title>
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Tailwind Configuration for the defined color palette and font
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-saffron': '#E07A5F', // Burnt Orange/Saffron
+                        'secondary-cream': '#F4F1DE', // Creamy Background
+                        'text-dark': '#3D405B',       // Dark Blue/Brown Text
+                        'accent-green': '#81B29A',    // Subtle Accent
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Apply Inter font globally and smooth scrolling */
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            color: #3D405B; /* Default text color */
+        }
+        /* Custom scrollbar styling for aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #E07A5F;
+            border-radius: 4px;
+        }
+        /* Style for the fixed header */
+        .sticky-header {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body class="bg-secondary-cream">
+
+    <!-- Sticky Navigation Bar -->
+    <header id="navbar" class="sticky top-0 z-50 bg-secondary-cream p-4 sticky-header">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#hero" class="text-2xl font-extrabold text-primary-saffron tracking-wider">
+                <span class="hidden sm:inline">The Spice Route</span>
+                <span class="sm:hidden">Spice Route</span>
+            </a>
+            <nav class="space-x-4">
+                <a href="#about" class="text-text-dark hover:text-primary-saffron transition duration-300 hidden sm:inline">About</a>
+                <a href="#menu" class="text-text-dark hover:text-primary-saffron transition duration-300 hidden sm:inline">Menu</a>
+                <a href="#events" class="text-text-dark hover:text-primary-saffron transition duration-300 hidden sm:inline">Events</a>
+                <a href="#contact" class="bg-primary-saffron text-secondary-cream py-2 px-4 rounded-full font-semibold hover:bg-primary-saffron/90 transition duration-300 text-sm">Book Inquiry</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Hero Section -->
+        <section id="hero" class="relative h-[80vh] md:h-[70vh] flex items-center justify-center text-center p-4 bg-cover bg-center" 
+                 style="background-image: url('https://placehold.co/1200x800/81B29A/F4F1DE?text=Cozy+Cafe+Interior+Image');">
+            <!-- Overlay for better text readability -->
+            <div class="absolute inset-0 bg-text-dark opacity-50"></div> 
+            
+            <div class="relative z-10 p-6 rounded-xl max-w-2xl bg-secondary-cream bg-opacity-90 shadow-2xl transform transition duration-500 hover:scale-[1.02]">
+                <h1 class="text-5xl md:text-7xl font-extrabold text-primary-saffron mb-4 leading-tight">
+                    The Spice Route
+                </h1>
+                <p class="text-xl md:text-2xl font-medium text-text-dark mb-8">
+                    Where Stories and Coffee Meet in Jalandhar.
+                </p>
+                <a href="#menu" class="bg-accent-green text-secondary-cream py-3 px-8 rounded-full font-bold text-lg uppercase tracking-wider hover:bg-accent-green/80 transition duration-300 shadow-lg">
+                    See Our Menu
+                </a>
+            </div>
+        </section>
+
+        <!-- 2. About Us Section -->
+        <section id="about" class="py-16 md:py-24 container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <h2 class="text-4xl font-extrabold text-primary-saffron mb-4">Our Story: More Than Just a Café</h2>
+                    <p class="mb-6 text-lg text-text-dark leading-relaxed">
+                        The Spice Route was founded in 2018 with a simple vision: to create a space where the rich aroma of books and the comforting warmth of a perfect brew intertwine. We're not just a bookstore or a café; we're a community hub for Jalandhar's literary lovers and creative minds.
+                    </p>
+                    <p class="text-lg text-text-dark italic border-l-4 border-accent-green pl-4">
+                        "Every cup holds a story, and every book, a journey." - Simran, Owner.
+                    </p>
+                </div>
+                <!-- Placeholder Image -->
+                <div class="order-1 md:order-2">
+                    <img src="https://placehold.co/600x400/3D405B/F4F1DE?text=Owner+and+Cozy+Interior" alt="Photo of the café owner and interior" class="rounded-xl shadow-2xl w-full h-auto object-cover transform transition duration-500 hover:rotate-1 hover:shadow-3xl">
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Café Menu Section -->
+        <section id="menu" class="py-16 md:py-24 bg-primary-saffron/10">
+            <div class="container mx-auto px-4">
+                <h2 class="text-center text-4xl font-extrabold text-primary-saffron mb-12">The Café Menu</h2>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Coffee Card -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <h3 class="text-2xl font-bold text-text-dark mb-3 border-b border-accent-green pb-2">Specialty Coffees</h3>
+                        <ul class="space-y-3">
+                            <li class="flex justify-between items-center"><span class="font-medium">Espresso Blend</span><span class="font-bold text-primary-saffron">₹ 150</span></li>
+                            <li class="flex justify-between items-center"><span class="font-medium">Jalandhari Cold Brew</span><span class="font-bold text-primary-saffron">₹ 180</span></li>
+                            <li class="flex justify-between items-center"><span class="font-medium">Saffron Latte</span><span class="font-bold text-primary-saffron">₹ 220</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Tea Card -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <h3 class="text-2xl font-bold text-text-dark mb-3 border-b border-accent-green pb-2">Artisan Teas</h3>
+                        <ul class="space-y-3">
+                            <li class="flex justify-between items-center"><span class="font-medium">Masala Chai (Traditional)</span><span class="font-bold text-primary-saffron">₹ 90</span></li>
+                            <li class="flex justify-between items-center"><span class="font-medium">Kashmir Kahwa</span><span class="font-bold text-primary-saffron">₹ 160</span></li>
+                            <li class="flex justify-between items-center"><span class="font-medium">Hibiscus Iced Tea</span><span class="font-bold text-primary-saffron">₹ 140</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Snacks Card -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <h3 class="text-2xl font-bold text-text-dark mb-3 border-b border-accent-green pb-2">Light Bites</h3>
+                        <ul class="space-y-3">
+                            <li class="flex justify-between items-center"><span class="font-medium">Paneer Croissant</span><span class="font-bold text-primary-saffron">₹ 190</span></li>
+                            <li class="flex justify-between items-center"><span class="font-medium">Chocolate Chip Cookie</span><span class="font-bold text-primary-saffron">₹ 70</span></li>
+                            <li class="flex justify-between items-center"><span class="font-medium">Veg Puff</span><span class="font-bold text-primary-saffron">₹ 80</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Events & Testimonials Section -->
+        <section id="events" class="py-16 md:py-24 container mx-auto px-4">
+            <h2 class="text-center text-4xl font-extrabold text-text-dark mb-12">Upcoming Events & Feedback</h2>
+
+            <!-- Events Carousel (Simulated with Cards) -->
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-white p-6 rounded-xl shadow-xl border-t-4 border-accent-green transition hover:shadow-2xl">
+                    <h3 class="text-2xl font-bold text-text-dark mb-2">Poetry Night</h3>
+                    <p class="text-primary-saffron font-semibold mb-3">Every Tuesday, 7:00 PM</p>
+                    <p class="text-gray-600">Open mic session for local poets and storytellers. Sign up at the counter!</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-xl border-t-4 border-accent-green transition hover:shadow-2xl">
+                    <h3 class="text-2xl font-bold text-text-dark mb-2">Book Club Meet</h3>
+                    <p class="text-primary-saffron font-semibold mb-3">2nd Saturday of the Month, 4:00 PM</p>
+                    <p class="text-gray-600">Discussing "The Alchemist" this month. New members always welcome.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-xl border-t-4 border-accent-green transition hover:shadow-2xl">
+                    <h3 class="text-2xl font-bold text-text-dark mb-2">Acoustic Sunday</h3>
+                    <p class="text-primary-saffron font-semibold mb-3">Last Sunday of the Month, 6:00 PM</p>
+                    <p class="text-gray-600">Live, mellow acoustic music to end your week peacefully.</p>
+                </div>
+            </div>
+
+            <!-- Testimonials -->
+            <div class="bg-primary-saffron/10 p-8 rounded-xl">
+                <h3 class="text-3xl font-bold text-text-dark mb-6 text-center">What Our Community Says</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <blockquote class="p-6 bg-white rounded-lg shadow-md border-l-4 border-primary-saffron">
+                        <p class="italic text-gray-700">"The best place to study in Jalandhar. The Saffron Latte is divine, and the staff are incredibly friendly. A true hidden gem."</p>
+                        <footer class="mt-4 font-semibold text-text-dark">— Karan S., Student</footer>
+                    </blockquote>
+                    <blockquote class="p-6 bg-white rounded-lg shadow-md border-l-4 border-primary-saffron">
+                        <p class="italic text-gray-700">"We hosted our small book launch here, and it was perfect! Cozy atmosphere and great coffee. Highly recommend for community events."</p>
+                        <footer class="mt-4 font-semibold text-text-dark">— Deepa V., Local Author</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Contact / Booking Inquiry Section -->
+        <section id="contact" class="py-16 md:py-24 bg-text-dark">
+            <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12 text-secondary-cream">
+                
+                <!-- Contact Details -->
+                <div>
+                    <h2 class="text-4xl font-extrabold text-primary-saffron mb-6">Visit Us</h2>
+                    <p class="mb-4 text-lg">We are located in the heart of Model Town, Jalandhar.</p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <p><strong class="text-accent-green">Address:</strong> 15-A, Main Market, Model Town, Jalandhar, Punjab 144003</p>
+                        <p><strong class="text-accent-green">Phone:</strong> +91 98765 43210</p>
+                        <p><strong class="text-accent-green">Email:</strong> contact@spiceroutecafe.in</p>
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-primary-saffron mb-4">Hours</h3>
+                    <p>Mon - Sat: 10:00 AM - 9:00 PM</p>
+                    <p>Sun: 11:00 AM - 8:00 PM</p>
+
+                    <!-- Map Placeholder -->
+                    <div class="mt-8 h-48 bg-gray-700 rounded-xl flex items-center justify-center">
+                        <p class="text-gray-400">Map Placeholder (e.g., Google Maps Embed)</p>
+                    </div>
+                </div>
+
+                <!-- Booking Inquiry Form -->
+                <div>
+                    <h2 class="text-4xl font-extrabold text-primary-saffron mb-6">Event/Table Inquiry</h2>
+                    <p class="mb-6 text-lg">Use the form below for event bookings, or large table reservations.</p>
+                    
+                    <form id="booking-form" class="space-y-4 bg-secondary-cream p-6 rounded-xl shadow-2xl text-text-dark">
+                        <div>
+                            <label for="name" class="block font-medium mb-1">Your Name</label>
+                            <input type="text" id="name" name="name" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary-saffron focus:border-primary-saffron">
+                        </div>
+                        <div>
+                            <label for="email" class="block font-medium mb-1">Email</label>
+                            <input type="email" id="email" name="email" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary-saffron focus:border-primary-saffron">
+                        </div>
+                        <div>
+                            <label for="query" class="block font-medium mb-1">Inquiry Type / Details</label>
+                            <textarea id="query" name="query" rows="4" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary-saffron focus:border-primary-saffron" placeholder="e.g., Large table reservation for 6 people on Saturday at 5 PM, or: I want to book a poetry reading slot."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary-saffron text-secondary-cream py-3 rounded-full font-bold text-lg hover:bg-primary-saffron/90 transition duration-300 shadow-md">
+                            Send Inquiry
+                        </button>
+                    </form>
+                    
+                    <!-- Confirmation Message Box (Replaces alert()) -->
+                    <div id="form-message" class="mt-4 p-4 rounded-lg text-lg hidden font-semibold text-center bg-accent-green text-secondary-cream">
+                        Thank you for your inquiry! We will contact you within 24 hours.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-text-dark text-secondary-cream p-6 text-center text-sm border-t border-primary-saffron">
+        <div class="container mx-auto">
+            <p>&copy; 2025 The Spice Route Bookstore & Café. All rights reserved. Designed for Jalandhar's community.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Form Submission Handling -->
+    <script>
+        document.getElementById('booking-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const form = event.target;
+            const name = form.elements['name'].value;
+            const email = form.elements['email'].value;
+            const query = form.elements['query'].value;
+            const messageBox = document.getElementById('form-message');
+
+            // Log data to console (simulating sending data to a server)
+            console.log('--- Form Submission Simulation ---');
+            console.log(`Name: ${name}`);
+            console.log(`Email: ${email}`);
+            console.log(`Query: ${query}`);
+            console.log('---------------------------------');
+
+            // 1. Display the success message
+            messageBox.classList.remove('hidden');
+            
+            // 2. Hide the form (optional, for clean success state)
+            form.classList.add('hidden');
+
+            // 3. Reset form after a short delay (for future use)
+            setTimeout(() => {
+                form.reset();
+                messageBox.classList.add('hidden');
+                form.classList.remove('hidden');
+            }, 5000); 
+        });
+    </script>
+</body>
+</html>
